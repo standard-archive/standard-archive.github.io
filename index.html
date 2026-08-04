@@ -3,76 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Developer Portfolio</title>
+    <title>SYS.ADMIN // Portfolio</title>
+    <!-- Pulling in a futuristic monospaced font -->
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-    <h1>Software Developer Portfolio</h1>
-    <p>Building clean architectures and complex logic.</p>
+<!-- New Header / Nav -->
+<header class="top-nav">
+    <div class="brand">LICHUME<span>_DEV</span></div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#about">SYS_INFO</a></li>
+            <li><a href="#projects">MODULES</a></li>
+            <li><a href="#contact">COMM_LINK</a></li>
+        </ul>
+    </nav>
 </header>
 
-<main>
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I thrive in project-based, peer-to-peer environments. I love tackling complex problems, whether that means working with data structures or debugging unit tests.</p>
+<!-- Dashboard Layout -->
+<main class="dashboard-grid">
+
+    <!-- Sidebar / Terminal -->
+    <aside class="panel profile-panel" id="about">
+        <h2>> USER_PROFILE</h2>
+        <div class="stats">
+            <p><span>CLASS:</span> Software Dev</p>
+            <p><span>STATUS:</span> Active / Building</p>
+            <p><span>STACK:</span> Java, Python, Git</p>
+        </div>
+        <p class="bio">I thrive in project-based, peer-to-peer environments. I build clean architectures, manipulate complex data structures, and debug unit tests.</p>
+    </aside>
+
+    <!-- Main Project Grid -->
+    <section class="panel projects-panel" id="projects">
+        <h2>> DEPLOYED_MODULES</h2>
+        <div class="card-grid">
+
+            <div class="project-card glow-border">
+                <h3>Robot World Architecture</h3>
+                <p class="tech-tag">Java // Maven</p>
+                <p>Collaborative server/client codebase requiring careful version control, data structure management, and robust networking logic.</p>
+            </div>
+
+            <div class="project-card glow-border">
+                <h3>OOP Person Model</h3>
+                <p class="tech-tag">Java // Maven</p>
+                <p>Strictly evaluated object-oriented programming project built and verified through automated Maven builds.</p>
+            </div>
+
+            <div class="project-card glow-border">
+                <h3>Data Structures & Grouping</h3>
+                <p class="tech-tag">Java</p>
+                <p>Implemented complex logic for coordinate pairing, occurrence counting, and provincial grouping.</p>
+            </div>
+
+            <div class="project-card glow-border">
+                <h3>Logic Games: Mastermind & Uno</h3>
+                <p class="tech-tag">Python</p>
+                <p>Functional logic for classic games built from scratch focusing on OOP, containers, and list manipulation.</p>
+            </div>
+
+            <div class="project-card glow-border">
+                <h3>Cash Register Module</h3>
+                <p class="tech-tag">Python</p>
+                <p>Robust change calculation program backed by thorough unit testing to ensure accuracy.</p>
+            </div>
+
+        </div>
     </section>
 
-    <section id="projects">
-        <h2>Featured Projects</h2>
+    <!-- Contact Panel -->
+    <section class="panel contact-panel" id="contact">
+        <h2>> INITIALIZE_CONNECTION</h2>
+        <!-- REPLACE THE ACTION URL WITH YOUR FORMSPREE LINK -->
+        <form action="https://formspree.io/f/xoeaaevr" method="POST" class="contact-form">
+            <div class="input-group">
+                <label for="name">ID_NAME</label>
+                <input type="text" id="name" name="name" required>
+            </div>
 
-        <!-- Project 1 -->
-        <div class="project-card">
-            <h3>Robot World Architecture</h3>
-            <p><strong>Tech:</strong> Java, Maven</p>
-            <p>A collaborative server and client codebase requiring careful version control, complex data structure management, and robust networking logic.</p>
-        </div>
+            <div class="input-group">
+                <label for="email">TRANSMISSION_ADDRESS</label>
+                <input type="email" id="email" name="email" required>
+            </div>
 
-        <!-- Project 2 -->
-        <div class="project-card">
-            <h3>OOP Person Model (oop-ex-person3)</h3>
-            <p><strong>Tech:</strong> Java, Maven</p>
-            <p>A strictly evaluated object-oriented programming project built and verified through automated Maven builds.</p>
-        </div>
+            <div class="input-group">
+                <label for="message">DATA_PAYLOAD</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
 
-        <!-- Project 3 -->
-        <div class="project-card">
-            <h3>Data Structures & Grouping</h3>
-            <p><strong>Tech:</strong> Java</p>
-            <p>Implemented complex logic for coordinate pairing, occurrence counting, and provincial grouping to process data efficiently.</p>
-        </div>
-
-        <!-- Project 4 -->
-        <div class="project-card">
-            <h3>Logic Games: Mastermind & Uno</h3>
-            <p><strong>Tech:</strong> Python</p>
-            <p>Built full functional logic for classic games from scratch, focusing on object-oriented programming, container structures, and list manipulation.</p>
-        </div>
-
-        <!-- Project 5 -->
-        <div class="project-card">
-            <h3>Cash Register Module</h3>
-            <p><strong>Tech:</strong> Python</p>
-            <p>A robust change calculation program backed by thorough unit testing to ensure calculation accuracy.</p>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2>Get In Touch</h2>
-        <form action="#" method="POST" class="contact-form">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-
-            <button type="submit">Send Message</button>
+            <button type="submit" class="submit-btn">TRANSMIT //></button>
         </form>
     </section>
+
 </main>
 
 </body>

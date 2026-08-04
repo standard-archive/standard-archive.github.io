@@ -1,48 +1,217 @@
-/* Contact Form Styles */
-.contact-form {
-    background-color: #2a2a2a;
-    padding: 2rem;
+/* Base futuristic styling */
+:root {
+    --bg-color: #121212;
+    --panel-bg: #1e1e24;
+    --text-main: #d3d3d3;
+    --accent-purple: #9b5de5;
+    --accent-purple-glow: rgba(155, 93, 229, 0.4);
+    --border-grey: #333333;
+}
+
+body {
+    font-family: 'Rajdhani', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    margin: 0;
+    padding: 0;
+    letter-spacing: 1px;
+}
+
+/* Header & Nav */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    background-color: var(--panel-bg);
+    border-bottom: 1px solid var(--border-grey);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.brand {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.brand span {
+    color: var(--accent-purple);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-purple);
+    text-shadow: 0 0 8px var(--accent-purple-glow);
+}
+
+/* Dashboard Grid Layout */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    gap: 2rem;
+    padding: 2rem 3rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Panels */
+.panel {
+    background-color: var(--panel-bg);
+    border: 1px solid var(--border-grey);
     border-radius: 4px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    padding: 2rem;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
+}
+
+h2 {
+    color: var(--accent-purple);
+    font-size: 1.5rem;
+    border-bottom: 1px dashed var(--border-grey);
+    padding-bottom: 0.5rem;
+    margin-top: 0;
+}
+
+/* Profile Sidebar */
+.stats p {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+}
+
+.stats span {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.bio {
+    margin-top: 1.5rem;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+/* Project Cards Grid inside the Main Panel */
+.projects-panel {
+    grid-column: 2;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.project-card {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-grey);
+    padding: 1.5rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.project-card h3 {
+    margin: 0 0 0.5rem 0;
+    color: #ffffff;
+}
+
+.tech-tag {
+    color: var(--accent-purple);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin: 0 0 1rem 0;
+}
+
+/* The Futuristic Hover Glow */
+.glow-border:hover {
+    border-color: var(--accent-purple);
+    box-shadow: 0 0 15px var(--accent-purple-glow);
+    transform: translateY(-3px);
+}
+
+/* Contact Form Grid Placement */
+.contact-panel {
+    grid-column: 1 / -1; /* Spans across both columns at the bottom */
+}
+
+.contact-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.input-group {
     display: flex;
     flex-direction: column;
 }
 
+/* Make the message box span both columns */
+.input-group:nth-child(3) {
+    grid-column: 1 / -1;
+}
+
 .contact-form label {
+    font-weight: 600;
     margin-bottom: 0.5rem;
-    font-weight: bold;
-    color: #e0e0e0;
+    color: var(--accent-purple);
 }
 
 .contact-form input,
 .contact-form textarea {
-    background-color: #1a1a1a;
-    border: 1px solid #444;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-grey);
     color: #ffffff;
-    padding: 0.75rem;
-    margin-bottom: 1.5rem;
-    border-radius: 4px;
-    font-family: inherit;
+    padding: 0.8rem;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.1rem;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
     outline: none;
-    border-color: #4CAF50;
+    border-color: var(--accent-purple);
+    box-shadow: 0 0 10px var(--accent-purple-glow);
 }
 
-.contact-form button {
-    background-color: #4CAF50;
-    color: #1a1a1a;
-    border: none;
+.submit-btn {
+    grid-column: 1 / -1;
+    background-color: transparent;
+    color: var(--accent-purple);
+    border: 1px solid var(--accent-purple);
     padding: 1rem;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 4px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    font-family: inherit;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
-.contact-form button:hover {
-    background-color: #45a049;
+.submit-btn:hover {
+    background-color: var(--accent-purple);
+    color: #ffffff;
+    box-shadow: 0 0 15px var(--accent-purple-glow);
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 900px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr; /* Stack sidebar on top of projects on mobile */
+    }
+    .projects-panel {
+        grid-column: 1;
+    }
 }
