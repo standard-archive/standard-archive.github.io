@@ -1,44 +1,48 @@
-/* Base styles */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #1a1a1a;
-    color: #e0e0e0;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-}
-
-header, main {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem;
-}
-
-/* Header typography */
-h1 {
-    color: #ffffff;
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-}
-
-h2 {
-    color: #4CAF50; /* A clean green accent */
-    border-bottom: 1px solid #333;
-    padding-bottom: 0.5rem;
-    margin-top: 2rem;
-}
-
-/* Project Cards */
-.project-card {
+/* Contact Form Styles */
+.contact-form {
     background-color: #2a2a2a;
-    border-left: 4px solid #4CAF50;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
+    padding: 2rem;
     border-radius: 4px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
 }
 
-.project-card h3 {
-    margin-top: 0;
+.contact-form label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #e0e0e0;
+}
+
+.contact-form input,
+.contact-form textarea {
+    background-color: #1a1a1a;
+    border: 1px solid #444;
     color: #ffffff;
+    padding: 0.75rem;
+    margin-bottom: 1.5rem;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+.contact-form button {
+    background-color: #4CAF50;
+    color: #1a1a1a;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #45a049;
 }
